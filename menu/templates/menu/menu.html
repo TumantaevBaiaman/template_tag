@@ -1,0 +1,23 @@
+{% extends "menu/base.html" %}
+{% load menu_tags %}
+
+{% block title %} home {% endblock %}
+{% block content %}
+<header>
+    <ul>
+        {% for item in menu %}
+            <li>
+                <a href="{% url "menu" item.name %}">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <h3>Information menu <span class="text-info">{{ name }}</span></h3><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut commodi debitis, distinctio dolorem, dolorum eos maxime nesciunt nisi pariatur perferendis, praesentium totam velit! Debitis explicabo vel veniam? Optio, possimus!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci deserunt doloribus, eum explicabo fuga, fugit hic, illo ipsum molestiae necessitatibus nobis nulla quidem quod repellendus similique sunt veniam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci deserunt doloribus, eum explicabo fuga, fugit hic, illo ipsum molestiae necessitatibus nobis nulla quidem quod repellendus similique sunt veniam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci deserunt doloribus, eum explicabo fuga, fugit hic, illo ipsum molestiae necessitatibus nobis nulla quidem quod repellendus similique sunt veniam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci deserunt doloribus, eum explicabo fuga, fugit hic, illo ipsum molestiae necessitatibus nobis nulla quidem quod repellendus similique sunt veniam.</p>
+    </div>
+</header>
+{% endblock %}
